@@ -1,42 +1,51 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.main-nav {
+  background: transparent;
+  /* padding: 1rem; */
+  font-family: sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-item {
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.nav-item > a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
 }
 
-.card {
-  padding: 2em;
+.nav-item .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  list-style: none;
+  padding: 0.5rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.read-the-docs {
-  color: #888;
+.nav-item .dropdown li {
+  padding: 0.5rem 1rem;
+}
+
+.nav-item .dropdown li a {
+  color: #333;
+  font-weight: normal;
+}
+
+.nav-item:hover .dropdown {
+  display: block;
+}
+
+.nav-item:hover > a {
+  color: #007acc;
 }
