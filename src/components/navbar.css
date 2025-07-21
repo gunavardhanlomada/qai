@@ -79,13 +79,27 @@
 
   .slide-tabs {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    gap: 5px;
+    background-color: #161b22;
+    padding: 1rem; /* Ensure background is visible */
+    border-radius: 1rem;
+    border: 1px solid #30363d;
+    list-style: none;
+  }
+
+  .tab-item {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    color: #c9d1d9;
   }
 
   .cursor-bg {
-    display: none; /* Optional: remove cursor on mobile */
+    display: none; /* Optional: remove animation cursor on mobile */
   }
 }
+
 
 .shiny-text {
   color: #b5b5b5a4; /* Adjust this color to change intensity/style */
