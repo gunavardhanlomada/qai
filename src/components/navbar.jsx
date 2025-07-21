@@ -24,6 +24,20 @@ const Navbar = () => {
 
 export default Navbar;
 
+const ShinyText = ({ text, disabled = false, speed = 5, className = '' }) => {
+  const animationDuration = `${speed}s`;
+
+  return (
+    <div
+      className={`shiny-text ${disabled ? 'disabled' : ''} ${className}`}
+      style={{ animationDuration }}
+    >
+      {text}
+    </div>
+  );
+};
+
+
 const SlideTabs = () => {
   const [position, setPosition] = useState({
     left: 0,
@@ -41,12 +55,12 @@ const SlideTabs = () => {
       }
       className="slide-tabs"
     >
-      <Tab setPosition={setPosition}>Home</Tab>
-      <Tab setPosition={setPosition}>Product</Tab>
-      <Tab setPosition={setPosition}>Contact Us</Tab>
-      <Tab setPosition={setPosition}>Services</Tab>
-      <Tab setPosition={setPosition}>Partners</Tab>
-      <Tab setPosition={setPosition}>About Us</Tab>
+      <Tab setPosition={setPosition}><ShinyText text="Home" /></Tab>
+      <Tab setPosition={setPosition}><ShinyText text="Product" /></Tab>
+      <Tab setPosition={setPosition}><ShinyText text="Contact Us" /></Tab>
+      <Tab setPosition={setPosition}><ShinyText text="Services" /></Tab>
+      <Tab setPosition={setPosition}><ShinyText text="Partners" /></Tab>
+      <Tab setPosition={setPosition}><ShinyText text="About Us" /></Tab>
 
       <Cursor position={position} />
     </ul>
@@ -85,3 +99,5 @@ const Cursor = ({ position }) => {
     />
   );
 };
+
+
