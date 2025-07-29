@@ -85,6 +85,10 @@ const SlideTabs = () => {
         </Link>
       </Tab>
 
+      <Tab setPosition={setPosition}><Link to="/login"><ShinyText text="login" />
+        </Link>
+      </Tab>
+
       <Cursor position={position} />
     </ul>
   );

@@ -17,7 +17,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 a {
   font-weight: 500;
   color: #646cff;
@@ -31,9 +30,10 @@ body {
   margin: 0px;
   min-width: 320px;
   min-height: 100vh;
-  background: #172633;
-  background: linear-gradient(145deg, rgba(23, 38, 51, 1) 60%, rgba(89, 106, 121, 1) 100%);
-}
+  /* background: #172633;
+  background: linear-gradient(145deg, rgba(23, 38, 51, 1) 60%, rgba(89, 106, 121, 1) 100%); */
+  background-image: url("img.png");
+}asdf
 
 h1 {
   font-size: 3.2em;

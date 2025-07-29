@@ -208,3 +208,112 @@ textarea{
 .purple-dot {
   background: #8b5cf6;
 }
+
+
+
+
+
+/* products */
+.products-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 100px;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.products-info {
+  flex: 1;
+  max-width: 40%;
+}
+
+.products-info h2 {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.products-info span {
+  background: linear-gradient(90deg, #7a00ff, #00e0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.products-info p {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.carousel {
+  flex: 1.2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: absolute;
+  width: 320px;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #1e1e2f;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  color: #fff;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+  opacity: 0;
+  transform: scale(0.8);
+  z-index: 0;
+}
+
+.card h3 {
+  color: #00d0ff;
+  margin-bottom: 10px;
+}
+
+.card.active {
+  opacity: 1;
+  transform: scale(1) translateX(0);
+  z-index: 2;
+}
+
+.card.prev {
+  transform: scale(0.85) translateX(-220px);
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.card.next {
+  transform: scale(0.85) translateX(220px);
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #000;
+  color: #00ffff;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.arrow.left {
+  left: -50px;
+}
+
+.arrow.right {
+  right: -50px;
+}
