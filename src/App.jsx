@@ -23,7 +23,6 @@ function App() {
         <Route path="/partners" element={<Partners />} />
         <Route path="/contactus" element={<Contactus />} />
         <Route path="/aboutus" element={<Aboutus />} />
-        <Route path="/login" element={<Login />} />
 
 
       </Routes>
