@@ -1,5 +1,72 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../../styles/home.css';
+
+const products = [
+  {
+    title: "Quantum Secure Migration",
+    description: "QSleeve ensures data security against quantum attacks by using post-quantum cryptography (PQC). PQC employs advanced mathematical algorithms resistant to quantum decryption methods, safeguarding sensitive information in the future quantum era.",
+  },
+  {
+    title: "AI-Driven Threat Detection",
+    description: "Real-time threat analysis powered by quantum AI to detect, respond, and neutralize anomalies faster than traditional systems.",
+  },
+  {
+    title: "Encrypted Data Vault",
+    description: "Store your most sensitive data in our quantum-proof encrypted vault. Layered with zero-trust architecture.",
+  },
+];
+
+const Products = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleNext = () => {
+    setActiveIndex((activeIndex + 1) % products.length);
+  };
+
+  const handlePrev = () => {
+    setActiveIndex((activeIndex - 1 + products.length) % products.length);
+  };
+
+  return (
+    <div className="products-container">
+      <div className="products-info">
+        <h2>
+          The Easiest Way To <br />
+          <span>Secure Your Data</span>
+        </h2>
+        <p>
+          QSleeve ensures your data stays secure, even against the quantum threats.
+          Built with advanced post-quantum cryptography, it offers unparalleled protection,
+          future-proofing your privacy and safeguarding sensitive communications.
+        </p>
+      </div>
+
+      <div className="carousel">
+        <div className="arrow left" onClick={handlePrev}>❮</div>
+
+        {products.map((product, index) => {
+          let position = "card next";
+          if (index === activeIndex) {
+            position = "card active";
+          } else if (
+            index === (activeIndex - 1 + products.length) % products.length
+          ) {
+            position = "card prev";
+          }
+
+          return (
+            <div key={index} className={position}>
+              <h3>{product.title}</h3>
+              <p>{product.description}</p>
+            </div>
+          );
+        })}
+
+        <div className="arrow right" onClick={handleNext}>❯</div>
+      </div>
+    </div>
+  );
+};
 
 const Home = () => {
   return (
@@ -12,13 +79,8 @@ const Home = () => {
         </p>
       </section>
 
-      {/* Products Section */}
-      <section className="products-section">
-        <div className="product-card">Quantum Chatbot</div>
-        <div className="product-card">AI Search</div>
-        <div className="product-card">Secure Storage</div>
-        <div className="product-card">Data Analysis</div>
-      </section>
+      {/* Product Carousel Section */}
+      <Products />
 
       {/* Services Section */}
       <section className="services-section">
@@ -44,7 +106,6 @@ const Home = () => {
           <div className="form-buttons">
             <button type="reset">Reset</button>
             <button type="submit">Submit</button>
-            
           </div>
         </form>
       </section>
