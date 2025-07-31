@@ -317,3 +317,113 @@ textarea{
 .arrow.right {
   right: -50px;
 }
+
+
+
+
+
+/* Medium Devices (Tablets) */
+@media (max-width: 1024px) {
+  .products-container {
+    flex-direction: column;
+    padding: 40px 30px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .products-info h2 {
+    font-size: 2rem;
+  }
+
+  .products-info p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .carousel {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 600px;
+    justify-content: center;
+  }
+
+  .card {
+    min-width: 250px;
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .services-list {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .service-card {
+    width: 45%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+  }
+}
+
+/* Small Devices (Mobiles) */
+@media (max-width: 768px) {
+  .products-info h2 {
+    font-size: 1.8rem;
+  }
+
+  .products-info span {
+    font-size: 2rem;
+  }
+
+  .carousel {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 90%;
+    margin: 10px 0;
+  }
+
+  .services-section {
+    padding: 30px 15px;
+  }
+
+  .services-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    width: 80%;
+    text-align: center;
+  }
+
+  .contact-form {
+    padding: 0 15px;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .footer-icons {
+    margin-top: 10px;
+  }
+}

@@ -4,7 +4,7 @@
   padding: 2rem;
 }
 
-/* Hero Section */
+
 .about-hero {
   text-align: center;
   padding: 3rem 1rem;
@@ -21,7 +21,6 @@
   margin: auto;
 }
 
-/* Vision, Mission, Values */
 .about-boxes {
   display: flex;
   flex-wrap: wrap;
@@ -42,7 +41,7 @@
   border-color: #00e0ff;
 }
 
-/* Video Section */
+
 .about-video {
   text-align: center;
   margin: 4rem 0;
@@ -55,7 +54,7 @@
   margin-bottom: 1rem;
 }
 
-/* Product Portfolio */
+
 .about-products {
   text-align: center;
   margin: 4rem 0;
@@ -81,7 +80,7 @@
   color: #5bc0ff;
 }
 
-/* Team Section */
+
 .about-team {
   margin: 4rem 0;
   text-align: center;
@@ -119,4 +118,60 @@
 .team-member span {
   font-size: 0.9rem;
   color: #888;
+}
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .about-hero {
+    padding: 2rem 1rem;
+  }
+
+  .about-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-hero p {
+    font-size: 0.95rem;
+  }
+
+  .about-boxes,
+  .product-grid,
+  .team-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-box,
+  .product-card,
+  .team-member {
+    width: 90%;
+    flex: none;
+  }
+
+  .team-member {
+    width: 200px;
+  }
+}
+
+/* Small devices (landscape phones, 576px to 767px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+
+  .about-boxes,
+  .product-grid,
+  .team-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-box,
+  .product-card {
+    width: 90%;
+    flex: none;
+  }
+
+  .team-member {
+    width: 180px;
+  }
 }
