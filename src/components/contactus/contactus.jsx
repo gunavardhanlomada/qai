@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../styles/contactus.css';
+import Footer from '../footer/Footer';
 
 const Contactus = () => {
   return (
@@ -24,10 +25,6 @@ const Contactus = () => {
           </form>
         </section>
       </div>
-
-      <footer className="contact-footer">
-        © 2025 QAI. All rights reserved. | Hyderabad, India
-      </footer>
     </div>
   );
 };

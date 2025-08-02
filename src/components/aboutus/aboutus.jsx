@@ -1,5 +1,6 @@
 import React from 'react';
 import "../../styles/aboutus.css";
+import Footer from '../footer/Footer';
 
 const AboutUs = () => {
   return (
@@ -96,9 +97,6 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-       <footer className="footer">
-                © 2025 QAI. All rights reserved. | Hyderabad, India
-        </footer>
     </div>
     
   );

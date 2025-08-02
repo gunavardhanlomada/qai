@@ -1,5 +1,6 @@
 import React from "react";
 import "../../styles/partners.css";
+import Footer from "../footer/Footer";
 
 const partnersList = [
   { name: "IBM", logo: "https://logos-world.net/wp-content/uploads/2020/04/IBM-Logo.png" },

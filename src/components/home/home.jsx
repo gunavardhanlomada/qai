@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../../styles/home.css';
+import Footer from '../footer/Footer';
 
 const products = [
   {
@@ -7,7 +8,7 @@ const products = [
     description: "QSleeve ensures data security against quantum attacks by using post-quantum cryptography (PQC). PQC employs advanced mathematical algorithms resistant to quantum decryption methods, safeguarding sensitive information in the future quantum era.",
   },
   {
-    title: "AI-Driven Threat Detectionnnnnnnn",
+    title: "AI-Driven Threat Detection",
     description: "Real-time threat analysis powered by quantum AI to detect, respond, and neutralize anomalies faster than traditional systems.",
   },
   {
@@ -109,15 +110,6 @@ const Home = () => {
           </div>
         </form>
       </section>
-
-      {/* Footer */}
-      <footer className="footer">
-        <p>© 2025 QAI. All Rights Reserved.</p>
-        <div className="footer-icons">
-          <span className="dot white-dot"></span>
-          <span className="dot purple-dot"></span>
-        </div>
-      </footer>
     </div>
   );
 };

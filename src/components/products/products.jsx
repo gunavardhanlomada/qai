@@ -1,6 +1,7 @@
 // import React from "react";
 import "../../styles/products.css";
 import React from "react";
+import Footer from "../footer/Footer";
 
 const products = [
   { name: "Quantum Processor", info: "Advanced computing power at atomic scale." },
@@ -38,10 +39,6 @@ function Products() {
           </div>
         ))}
       </section>
-
-      <footer className="footer">
-        <p>© 2025 Quantum AI Innovations | All rights reserved</p>
-      </footer>
     </div>
   );
 }
