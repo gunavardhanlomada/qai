@@ -74,7 +74,12 @@ const Home = () => {
     <div className="home-container">
       {/* Explore Section */}
       <section className="explore-section">
-        <h2 className="explore-title">Explore QAI Products</h2>
+        {/* <span className="explore-title">Explore QAI Products</span> */}
+        <div className='explore-title'>  
+          <h4>Explore <span>Quantum AI Products</span> </h4>
+          </div>
+
+
         <p className="explore-description">
           Dive into the future with our cutting-edge quantum-powered AI services and products.
         </p>

@@ -8,7 +8,7 @@ const Footer = () => {
           className="text-center"
           style={{ textAlign: 'center', width: '100%' }}
         >
-          © 2025 QAI. All Rights Reserved...
+          © 2025 QAI. All Rights Reserved.
         </p>
       {/* </div> */}
     </footer>

@@ -62,10 +62,6 @@ const Services = () => {
           </div>
         ))}
       </section>
-
-      <footer className="footer">
-        <p>&copy; {new Date().getFullYear()} QAI. All rights reserved.</p>
-      </footer>
     </div>
   );
 };

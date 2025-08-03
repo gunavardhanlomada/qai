@@ -1,19 +1,41 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import '../../styles/login.css';
+import apicall from '../../../Endpoint';
 
 const Login = () => {
   const navigate = useNavigate();
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false);
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    // You can add actual authentication logic here
-    if (username && password) {
-      navigate('/home');
-    } else {
-      alert('Please enter both username and password');
+    if (!email || !password) {
+      alert('Please enter both email and password');
+      return;
+    }
+
+    try {
+      setLoading(true);
+      const response = await axios.post(`${apicall}/api/auth/login`, {
+        email,
+        password,
+      });
+
+      const { token, name, _id } = response.data;
+
+      // Save token and user info in localStorage
+      localStorage.setItem('token', token);
+      localStorage.setItem('user', JSON.stringify({ name, email, _id }));
+
+      navigate('/admin');
+    } catch (error) {
+      const message = error.response?.data?.message || 'Invalid credentials';
+      alert(message);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -21,12 +43,12 @@ const Login = () => {
     <div className="login-container">
       <h1 className="welcome-text">Welcome to QAI</h1>
       <form className="login-form" onSubmit={handleLogin}>
-        <center><h2> Login </h2></center>
+        <center><h2>Login</h2></center>
         <input
-          type="text"
-          placeholder="Username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           required
         />
         <input
@@ -39,7 +61,9 @@ const Login = () => {
         <div className="forgot-password">
           <a href="#">Forgot Password?</a>
         </div>
-        <button type="submit">Login</button>
+        <button type="submit" disabled={loading}>
+          {loading ? 'Logging in...' : 'Login'}
+        </button>
       </form>
     </div>
   );

@@ -8,6 +8,7 @@ import Partners from './components/partners/partners';
 import Contactus from './components/contactus/contactus';
 import Aboutus from './components/aboutus/aboutus';
 import Layout from './Layout';
+import AdminDashboard from './components/admin/AdminDashboard';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/partners" element={<Layout><Partners /></Layout>} />
         <Route path="/contactus" element={<Layout><Contactus /></Layout>} />
         <Route path="/aboutus" element={<Layout><Aboutus /></Layout>} />
+        <Route path='/admin' element = {<Layout><AdminDashboard/></Layout>}/>
       </Routes>
     </BrowserRouter>
   );
