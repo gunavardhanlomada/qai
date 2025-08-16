@@ -2,6 +2,8 @@
   color: white;
   font-family: 'Segoe UI', sans-serif;
   padding-bottom: 60px;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .products-intro {
@@ -9,6 +11,7 @@
   padding: 50px 20px;
   max-width: 900px;
   margin: 0 auto;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .products-intro h1 {
@@ -16,8 +19,14 @@
   margin-bottom: 20px;
 }
 
-.gradient-text {
+/* .gradient-text {
   background: linear-gradient(to right, #9333ea, #e11d48, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+
+.gradient-text {
+  background: linear-gradient(90deg, #7a00ff, #00e0ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -28,72 +37,98 @@
   line-height: 1.6;
 }
 
-/* Hexagon Grid */
-.hex-grid {
-  display:flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 70%;
-  padding: 20px 10px;
-  gap: 50px;
-  
-}
-
-.hex {
-  width: 150px;
-  height: 86px;
-  background: transparent;
-  position: relative;
-  margin: 23px 6px ;
-  perspective: 1200px;
-  transition: transform 0.3s ease-in-out;
-  
-}
-
-.hex-inner {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  transform-style: preserve-3d;
-  transition: transform 0.6s ease;
-}
-
-.hex:hover .hex-inner {
-  transform: rotateY(180deg);
-}
-
-/* Front and Back */
-.hex-front,
-.hex-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  border-radius: 12px;
-  backface-visibility: hidden;
+/* Card Grid */
+.card-grid {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  max-width: 70%;
+  padding : 20px 10px;
   justify-content: center;
-  font-weight: bold;
-  text-align: center;
-  clip-path: polygon(
-    50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%
-  );
-  box-shadow: 0 0 15px #9333ea80;
+  gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 80px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  
 }
 
-.hex-front {
-  background: linear-gradient(135deg, #6d28d9, #9333ea);
-  color: #fff;
+/* Flip Card Styles */
+.flip-card {
+  background-color: transparent;
+  width: 20%;
+  height: 320px;
+  perspective: 1000px;
+  transition: transform 0.4s ease-in-out;
 }
 
-.hex-back {
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
-  background: linear-gradient(135deg, #2563eb, #22d3ee);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  /* box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); */
+  box-shadow: 0 6px 18px rgba(0, 255, 255, 0.2);
+  border-color: #00ffff;
+  transition: border 0.3s ease;
+}
+
+.flip-card-front {
+  border: 2px solid transparent;
+}
+
+.flip-card-front:hover {
+  border: 2px solid #9333ea;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flip-card-back {
+  /* background: linear-gradient(135deg, #2563eb, #9333ea); */
+  
+  background: rgba(255, 255, 255, 0.05);
+  
   color: #fff;
-  font-size: 0.85rem;
+  transform: rotateY(180deg);
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid transparent;
+}
+
+.flip-card-back:hover {
+  border: 2px solid #00ffff;
+}
+
+.flip-card-back h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.flip-card-back p {
+  font-size: 0.95rem;
+  color: #ddd;
+  line-height: 1.5;
 }
 
 /* Footer */
@@ -106,38 +141,26 @@
   color: #999;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hex {
-    width: 120px;
-    height: 70px;
-    margin: 36px 4px;
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-
-  .hex-front,
-  .hex-back {
-    font-size: 0.8rem;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
 
+@media screen and (max-width: 600px) {
   .products-intro h1 {
     font-size: 2rem;
   }
-
   .products-intro p {
     font-size: 1rem;
   }
-}
-
-@media (max-width: 480px) {
-  .hex {
-    width: 100px;
-    height: 58px;
-  }
-
-  .hex-front,
-  .hex-back {
-    font-size: 0.75rem;
-    padding: 14px;
+  .flip-card {
+    height: 260px;
   }
 }
-

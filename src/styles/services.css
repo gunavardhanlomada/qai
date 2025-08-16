@@ -12,8 +12,10 @@
 }
 
 .intro h1 {
-  font-size: 2.5rem;
-  color: #58e6ff;
+  font-size: 2.46rem;
+  background: linear-gradient(90deg, #7a00ff, #00e0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 15px;
 }
 
@@ -25,7 +27,7 @@
 
 .cards-container {
   display: grid;
-  gap: 15px;
+  gap: 30px;
   row-gap: 40px;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   max-width: 1200px;
@@ -49,7 +51,9 @@
 }
 
 .service-card h3 {
-  color: #00ffff;
+  background: linear-gradient(90deg, #7a00ff, #00e0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 10px;
 }
 

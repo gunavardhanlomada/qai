@@ -4,7 +4,6 @@
   padding: 2rem;
 }
 
-/* Hero Section */
 .about-hero {
   text-align: center;
   padding: 3rem 1rem;
@@ -12,16 +11,17 @@
   -webkit-background-clip: text;
   color: transparent;
 }
+
 .about-hero h1 span {
   color: #00ffff;
 }
+
 .about-hero p {
   color: #bbb;
   max-width: 800px;
   margin: auto;
 }
 
-/* Vision, Mission, Values */
 .about-boxes {
   display: flex;
   flex-wrap: wrap;
@@ -29,6 +29,7 @@
   gap: 1rem;
   margin: 3rem 0;
 }
+
 .about-box {
   flex: 1 1 300px;
   background: #111;
@@ -37,38 +38,42 @@
   border-radius: 12px;
   transition: transform 0.3s ease;
 }
+
 .about-box:hover {
   transform: translateY(-8px);
   border-color: #00e0ff;
 }
 
-/* Video Section */
 .about-video {
   text-align: center;
   margin: 4rem 0;
 }
+
 .about-video h2 {
   color: #00e0ff;
 }
+
 .about-video p {
   color: #888;
   margin-bottom: 1rem;
 }
 
-/* Product Portfolio */
 .about-products {
   text-align: center;
   margin: 4rem 0;
 }
+
 .about-products h2 span {
   color: #00e0ff;
 }
+
 .product-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 1rem;
 }
+
 .product-card {
   flex: 1 1 300px;
   background: linear-gradient(to bottom right, #111, #1e1e2f);
@@ -77,46 +82,134 @@
   border-radius: 10px;
   color: #ccc;
 }
+
 .product-card h3 {
   color: #5bc0ff;
 }
 
-/* Team Section */
-.about-team {
-  margin: 4rem 0;
+.aboutteam {
   text-align: center;
+  margin-top: 3rem;
 }
-.about-team span {
-  color: #00e0ff;
+
+.about-team {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 4rem 0;
 }
+
 .team-category {
-  margin-top: 2rem;
+  text-align: center;
+  padding: 1rem 0;
 }
+
 .team-grid {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  
   gap: 1.5rem;
-  margin-top: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  justify-content: center;
+  scrollbar-width: thin;
 }
+
+.team-grid::-webkit-scrollbar {
+  height: 6px;
+}
+
+.team-grid::-webkit-scrollbar-thumb {
+  background: #00e0ff;
+  border-radius: 4px;
+}
+
 .team-member {
+  min-width: 150px;
   background: #111;
   border-radius: 10px;
   padding: 1rem;
   text-align: center;
-  width: 150px;
+  flex: 0 0 auto;
 }
+
 .team-member img {
   width: 100%;
   border-radius: 50%;
   border: 2px solid #00e0ff;
   margin-bottom: 0.5rem;
 }
+
 .team-member p {
   margin: 0.3rem 0;
   color: #fff;
 }
+
 .team-member span {
   font-size: 0.9rem;
   color: #888;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  color: #888;
+  border-top: 1px solid #333;
+  margin-top: 4rem;
+}
+
+/* Responsive Media Queries */
+
+@media (max-width: 575.98px) {
+  .about-hero {
+    padding: 2rem 1rem;
+  }
+
+  .about-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-hero p {
+    font-size: 0.95rem;
+  }
+
+  .about-boxes,
+  .product-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-box,
+  .product-card {
+    width: 90%;
+    flex: none;
+  }
+
+  .team-member {
+    min-width: 180px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+
+  .about-boxes,
+  .product-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-box,
+  .product-card {
+    width: 90%;
+    flex: none;
+  }
+
+  .team-member {
+    min-width: 160px;
+  }
 }

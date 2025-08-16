@@ -4,10 +4,13 @@ import "../../styles/aboutus.css";
 const AboutUs = () => {
   return (
     <div className="about-us">
+
       {/* Hero Section */}
       <section className="about-hero">
         <h1><span>Crafting</span> Tomorrow's <br /> <span>Innovations</span> Today</h1>
-        <p>At Quantum AI Global, we drive the quantum revolution by merging quantum technologies with AI innovations, transforming industries through exponential intelligence.</p>
+        <p>
+          At Quantum AI Global, we drive the quantum revolution by merging quantum technologies with AI innovations, transforming industries through exponential intelligence.
+        </p>
       </section>
 
       {/* Vision, Mission, Values */}
@@ -55,24 +58,38 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Team Sections */}
-      <section className="about-team">
+      {/* Team Section Title */}
+      <section className='aboutteam'>
         <h2>Meet Our <span>Team</span></h2>
         <p>The people powering our quantum-AI breakthroughs.</p>
+      </section>
 
+      {/* Team Sections */}
+      <section className="about-team">
+
+        {/* Core Team */}
         <div className="team-category">
           <h3>Core Team</h3>
           <div className="team-grid">
-            {/* Repeatable member */}
             <div className="team-member">
               <img src="/images/team1.jpg" alt="Core Member" />
               <p>Mr. Sanjay Chinnas</p>
               <span>Founder & CEO</span>
             </div>
-            {/* Add more members as needed */}
+            <div className="team-member">
+              <img src="/images/team1.jpg" alt="Core Member" />
+              <p>Ms. Anita Rao</p>
+              <span>CTO</span>
+            </div>
+            <div className="team-member">
+              <img src="/images/team1.jpg" alt="Core Member" />
+              <p>Dr. Harsha Mehta</p>
+              <span>Chief Scientist</span>
+            </div>
           </div>
         </div>
 
+        {/* Advisory */}
         <div className="team-category">
           <h3>Advisory</h3>
           <div className="team-grid">
@@ -81,9 +98,20 @@ const AboutUs = () => {
               <p>Michael Lin</p>
               <span>Tech Advisor</span>
             </div>
+            <div className="team-member">
+              <img src="/images/advisor1.jpg" alt="Advisor" />
+              <p>Sarah Wong</p>
+              <span>AI Policy Advisor</span>
+            </div>
+            <div className="team-member">
+              <img src="/images/advisor1.jpg" alt="Advisor" />
+              <p>Dr. Naveen Patel</p>
+              <span>Quantum Research Advisor</span>
+            </div>
           </div>
         </div>
 
+        {/* Mentors */}
         <div className="team-category">
           <h3>Mentors</h3>
           <div className="team-grid">
@@ -91,16 +119,17 @@ const AboutUs = () => {
               <img src="/images/mentor1.jpg" alt="Mentor" />
               <p>Dr. Jayas</p>
               <span>Quantum Physicist</span>
-             
+            </div>
+            <div className="team-member">
+              <img src="/images/mentor1.jpg" alt="Mentor" />
+              <p>Prof. Ramesh Rao</p>
+              <span>AI Researcher</span>
             </div>
           </div>
         </div>
+
       </section>
-       <footer className="footer">
-                © 2025 QAI. All rights reserved. | Hyderabad, India
-        </footer>
     </div>
-    
   );
 };
 
