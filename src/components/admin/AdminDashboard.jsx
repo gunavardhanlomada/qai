@@ -19,7 +19,7 @@ const AdminDashboard = () => {
 
       const res = await axios.get(`${apicall}/api/contacts/getdetails`, {
         headers: {
-          Authorization: `Bearer ${token}`, // Add "Bearer " prefix
+          Authorization: `Bearer ${token}`,
         },
       });
 
