@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import '../../styles/contactus.css';
 import Footer from '../footer/Footer';
-import apicall from '../../../Endpoint'; // make sure this points to http://localhost:5000
+import apicall from '../../../Endpoint';
 
 const Contactus = () => {
   const [form, setForm] = useState({
