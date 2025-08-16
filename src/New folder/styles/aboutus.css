@@ -1,0 +1,122 @@
+.about-us {
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 2rem;
+}
+
+/* Hero Section */
+.about-hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(to right, #5b2fff, #00e0ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.about-hero h1 span {
+  color: #00ffff;
+}
+.about-hero p {
+  color: #bbb;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Vision, Mission, Values */
+.about-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
+  margin: 3rem 0;
+}
+.about-box {
+  flex: 1 1 300px;
+  background: #111;
+  border: 1px solid #333;
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+.about-box:hover {
+  transform: translateY(-8px);
+  border-color: #00e0ff;
+}
+
+/* Video Section */
+.about-video {
+  text-align: center;
+  margin: 4rem 0;
+}
+.about-video h2 {
+  color: #00e0ff;
+}
+.about-video p {
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+/* Product Portfolio */
+.about-products {
+  text-align: center;
+  margin: 4rem 0;
+}
+.about-products h2 span {
+  color: #00e0ff;
+}
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
+}
+.product-card {
+  flex: 1 1 300px;
+  background: linear-gradient(to bottom right, #111, #1e1e2f);
+  border: 1px solid #222;
+  padding: 1.5rem;
+  border-radius: 10px;
+  color: #ccc;
+}
+.product-card h3 {
+  color: #5bc0ff;
+}
+
+/* Team Section */
+.about-team {
+  margin: 4rem 0;
+  text-align: center;
+}
+.about-team span {
+  color: #00e0ff;
+}
+.team-category {
+  margin-top: 2rem;
+}
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.team-member {
+  background: #111;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  width: 150px;
+}
+.team-member img {
+  width: 100%;
+  border-radius: 50%;
+  border: 2px solid #00e0ff;
+  margin-bottom: 0.5rem;
+}
+.team-member p {
+  margin: 0.3rem 0;
+  color: #fff;
+}
+.team-member span {
+  font-size: 0.9rem;
+  color: #888;
+}
