@@ -32,5 +32,6 @@ body {
   min-height: 100vh;
   /* background: #172633;
   background: linear-gradient(145deg, rgba(23, 38, 51, 1) 60%, rgba(89, 106, 121, 1) 100%); */
-  background-image: url("img.png");
+  /* background-image: url("img.png"); */
+  background-color: #0f0e0e;
 }
