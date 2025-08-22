@@ -1,19 +1,23 @@
-import React, { useState } from 'react';
-import '../../styles/home.css';
-import Footer from '../footer/Footer';
+import React, { useState } from "react";
+import "../../styles/home.css";
+import Footer from "../footer/Footer";
+import Orb from "../home/orb"; // adjust path if orb is in a different folder
 
 const products = [
   {
     title: "Quantum Secure Migration",
-    description: "QSleeve ensures data security against quantum attacks by using post-quantum cryptography (PQC). PQC employs advanced mathematical algorithms resistant to quantum decryption methods, safeguarding sensitive information in the future quantum era.",
+    description:
+      "QSleeve ensures data security against quantum attacks by using post-quantum cryptography (PQC). PQC employs advanced mathematical algorithms resistant to quantum decryption methods, safeguarding sensitive information in the future quantum era.",
   },
   {
     title: "AI-Driven Threat Detection",
-    description: "Real-time threat analysis powered by quantum AI to detect, respond, and neutralize anomalies faster than traditional systems.",
+    description:
+      "Real-time threat analysis powered by quantum AI to detect, respond, and neutralize anomalies faster than traditional systems.",
   },
   {
     title: "Encrypted Data Vault",
-    description: "Store your most sensitive data in our quantum-proof encrypted vault. Layered with zero-trust architecture.",
+    description:
+      "Store your most sensitive data in our quantum-proof encrypted vault. Layered with zero-trust architecture.",
   },
 ];
 
@@ -36,14 +40,17 @@ const Products = () => {
           <span>Secure Your Data</span>
         </h2>
         <p>
-          QSleeve ensures your data stays secure, even against the quantum threats.
-          Built with advanced post-quantum cryptography, it offers unparalleled protection,
-          future-proofing your privacy and safeguarding sensitive communications.
+          QSleeve ensures your data stays secure, even against the quantum
+          threats. Built with advanced post-quantum cryptography, it offers
+          unparalleled protection, future-proofing your privacy and safeguarding
+          sensitive communications.
         </p>
       </div>
 
       <div className="carousel">
-        <div className="arrow left" onClick={handlePrev}>❮</div>
+        <div className="arrow left" onClick={handlePrev}>
+          ❮
+        </div>
 
         {products.map((product, index) => {
           let position = "card next";
@@ -63,7 +70,9 @@ const Products = () => {
           );
         })}
 
-        <div className="arrow right" onClick={handleNext}>❯</div>
+        <div className="arrow right" onClick={handleNext}>
+          ❯
+        </div>
       </div>
     </div>
   );
@@ -72,16 +81,26 @@ const Products = () => {
 const Home = () => {
   return (
     <div className="home-container">
-      {/* Explore Section */}
+      {/* Explore Section with Orb in the background */}
       <section className="explore-section">
-        {/* <span className="explore-title">Explore QAI Products</span> */}
-        <div className='explore-title'>  
-          <h4>Explore <span>Quantum AI Products</span> </h4>
-          </div>
+        <div className="orb-background">
+          <Orb
+            hoverIntensity={0.5}
+            rotateOnHover={true}
+            hue={0}
+            forceHoverState={false}
+          />
+        </div>
 
+        <div className="explore-title">
+          <h4>
+            Explore <span>Quantum AI Products</span>
+          </h4>
+        </div>
 
         <p className="explore-description">
-          Dive into the future with our cutting-edge quantum-powered AI services and products.
+          Dive into the future with our cutting-edge quantum-powered AI services
+          and products.
         </p>
       </section>
 
@@ -92,7 +111,10 @@ const Home = () => {
       <section className="services-section">
         <div className="services-description">
           <h2 className="services-title">Our Services</h2>
-          <p className="services-text">We provide intelligent tools powered by quantum AI to transform your digital life.</p>
+          <p className="services-text">
+            We provide intelligent tools powered by quantum AI to transform your
+            digital life.
+          </p>
         </div>
         <div className="services-list">
           <div className="service-card">Voice Agent</div>
