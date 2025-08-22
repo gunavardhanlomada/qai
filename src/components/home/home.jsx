@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../../styles/home.css";
 import Footer from "../footer/Footer";
 import Orb from "../home/orb"; // adjust path if orb is in a different folder
+import Threads from "./Threads"; // adjust path as per your folder
 
 const products = [
   {
@@ -33,7 +34,17 @@ const Products = () => {
   };
 
   return (
-    <div className="products-container">
+  <div className="products-container">
+    {/* Threads Background */}
+    <div className="threads-background">
+      <Threads color={[0.3, 0.7, 1]} 
+      amplitude={1.6}
+      distance={0.1}
+      enableMouseInteraction={false}  />
+    </div>
+
+    {/* Foreground content */}
+    <div className="products-content">
       <div className="products-info">
         <h2>
           The Easiest Way To <br />
@@ -75,7 +86,9 @@ const Products = () => {
         </div>
       </div>
     </div>
-  );
+  </div>
+);
+
 };
 
 const Home = () => {
