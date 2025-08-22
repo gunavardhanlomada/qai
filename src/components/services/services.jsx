@@ -1,5 +1,6 @@
 import React from "react";
 import "../../styles/services.css";
+import DotGrid from './DotGrid';
 
 const servicesData = [
   {
@@ -47,6 +48,17 @@ const servicesData = [
 const Services = () => {
   return (
     <div className="services-wrapper">
+  <DotGrid
+    dotSize={5}
+    gap={15}
+    baseColor="#468a98"
+    activeColor="#5227FF"
+    proximity={120}
+    shockRadius={250}
+    shockStrength={5}
+    resistance={750}
+    returnDuration={1.5}
+  />
       <section className="intro">
         <h1>Empowering Industries with Quantum & AI</h1>
         <p>
