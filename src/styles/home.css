@@ -437,3 +437,35 @@ textarea{
     margin-top: 10px;
   }
 }
+
+
+
+
+
+.explore-section {
+  position: relative;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.orb-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* keeps orb behind */
+}
+
+.explore-title,
+.explore-description {
+  position: relative;
+  z-index: 1; /* text above orb */
+  color: white; /* adjust based on orb color */
+}
+
