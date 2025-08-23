@@ -49,8 +49,8 @@ const Services = () => {
   return (
     <div className="services-wrapper">
   <DotGrid
-    dotSize={5}
-    gap={15}
+    dotSize={8}
+    gap={25}
     baseColor="#468a98"
     activeColor="#5227FF"
     proximity={120}
