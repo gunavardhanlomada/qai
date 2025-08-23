@@ -31,6 +31,7 @@ const AboutUs = () => {
 
       {/* Journey Video */}
       <section className="about-video">
+        
         <h2>Our Journey</h2>
         <p>Learn about our evolution in quantum technologies and artificial intelligence shaping the future.</p>
         <video controls width="100%">
